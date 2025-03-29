@@ -1,0 +1,32 @@
+﻿@model CheatsheetWebApp.Models.Cheatsheet
+@using Microsoft.AspNetCore.Mvc.Localization;
+@inject IViewLocalizer Localizer;
+
+@{
+    ViewData["Title"] = @Localizer["Details"];
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>@Localizer["Cheatsheet"]</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Localizer["Question"]
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Question)
+        </dd>
+        <dt class = "col-sm-2">
+            @Localizer["Answer"]
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">@Localizer["Edit"]</a> |
+    <a asp-action="Index">@Localizer["Back"]</a>
+</div>
