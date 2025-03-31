@@ -12,4 +12,6 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
 public DbSet<CheatsheetWebApp.Models.Cheatsheet> Cheatsheet { get; set; } = default!;
+
+public DbSet<CheatsheetWebApp.Models.Comment> Comment { get; set; } = default!;
 }

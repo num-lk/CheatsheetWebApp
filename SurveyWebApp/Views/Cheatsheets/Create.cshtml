@@ -15,12 +15,12 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Question" class="control-label">@Localizer["Answer"]</label>
+                <label asp-for="Question" class="control-label">@Localizer["Question"]</label>
                 <input asp-for="Question" class="form-control" />
                 <span asp-validation-for="Question" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Answer" class="control-label">@Localizer["Question"]</label>
+                <label asp-for="Answer" class="control-label">@Localizer["Answer"]</label>
                 <input asp-for="Answer" class="form-control" />
                 <span asp-validation-for="Answer" class="text-danger"></span>
             </div>
